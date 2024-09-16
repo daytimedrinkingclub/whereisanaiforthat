@@ -17,19 +17,23 @@
 whereisanaiforthat/
     - app/
         - static/
+          - styles.css # any custom styles needed can be added here
         - templates/
+          - index.html # Currently the only template added 
         - __init__.py
         - routes/
           - __init__.py
-          - routes.py
+          - routes.py # contains all the routes of the application
         - services/
-    - readme.md
+          - __init__.py
+          - data_services.py # data services for the application from supabase to get the tools, tool categorries and submit tool services
+    - readme.md # this file
     - requirements.txt
-    - run.py
-    - Dockerfile
-    - config.py
-    - supabase_client.py
-    - .env
+    - run.py # local run file
+    - Dockerfile # docker file for the application
+    - config.py # contains the config for the application
+    - supabase_client.py # contains the supabase client for the application
+    - .env # contains the environment variables for the application
     - .gitignore
 ```
 ### Supabase table structure

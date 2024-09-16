@@ -1,35 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Where is an AI For That</title>
-    <!-- Include Bootstrap CSS from a CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
+{% extends "base.html" %}
 
-<body>
-    <div class="container">
-        <h1 class="mt-5">AI Tools Listing</h1>
-        <div class="row mt-3">
-            {% for tool in data %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ tool.tool_name }}</h5>
-                            <p class="card-text">{{ tool.tool_details }}</p>
-                            <p class="card-text"><strong>Features:</strong> {{ tool.tool_core_features }}</p>
-                            <p class="card-text"><strong>Tags:</strong> {{ tool.tool_tags }}</p>
-                            <p class="card-text"><strong>Category:</strong> {{ tool.tool_category }}</p>
-                            <p class="card-text"><strong>By:</strong> {{ tool.tool_by }}</p>
-                            <p class="card-text"><strong>Content:</strong> {{ tool.tool_content }}</p>
-                            <p class="card-text"><small class="text-muted">Updated at {{ tool.updated_at }}</small></p>
-                        </div>
-                    </div>
-                </div>
-            {% else %}
-                <p>No tools available.</p>
-            {% endfor %}
-        </div>
+{% block title %}AI Tools Listing{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mb-5">AI tools which work 100%</h1>
+    
+    {% include 'category.html' %}
+
+
+    <div class="row" id="aiToolsContainer">
+        {% for tool in data %}
+            {% include 'tool_card.html' %}
+        {% else %}
+            <p class="text-center">No tools available.</p>
+        {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}

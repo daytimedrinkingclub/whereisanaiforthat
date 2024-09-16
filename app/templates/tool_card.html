@@ -1,0 +1,15 @@
+<div class="col-md-4 mb-4">
+    <div class="card h-100 shadow">
+        <div class="card-body">
+            <h5 class="card-title text-light">{{ tool.tool_name }}</h5>
+            <p class="card-text text-light-50">{{ tool.tool_details }}</p>
+            <p class="text-light-50"><strong><i class="fas fa-cogs"></i> Features:</strong> {{ tool.tool_core_features }}</p>
+            <p class="text-light-50"><strong><i class="fas fa-tags"></i> Tags:</strong> {{ tool.tool_tags }}</p>
+            <p class="text-light-50"><strong><i class="fas fa-folder"></i> Category:</strong> {{ tool.tool_category }}</p>
+            <p class="text-light-50"><strong><i class="fas fa-user"></i> By:</strong> {{ tool.tool_by }}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <small>Updated: {{ tool.updated_at }}</small>
+        </div>
+    </div>
+</div>
