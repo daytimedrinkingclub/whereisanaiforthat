@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}AI Tools Listing{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mb-5">AI tools which work 100%</h1>
+    
+    <div class="row">
+        <div class="col-md-3">
+            {% include 'components/side_nav.html' %}
+        </div>
+        <div class="col-md-9">
+            <div class="row" id="aiToolsContainer">
+                {% for tool in data %}
+                    {% include 'components/tool_card.html' %}
+                {% else %}
+                    <p class="text-center">No tools available.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

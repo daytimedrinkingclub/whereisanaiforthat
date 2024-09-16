@@ -1,0 +1,22 @@
+<div class="side-nav sticky-top">
+    <h5 class="p-3" data-bs-toggle="collapse" data-bs-target="#sideNavCollapse" aria-expanded="false" aria-controls="sideNavCollapse">
+        Categories <i class="fas fa-chevron-down"></i>
+    </h5>
+    <div class="collapse show" id="sideNavCollapse">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="{{ url_for('main.index') }}" class="nav-link {% if not selected_category %}active{% endif %}">
+                    All
+                </a>
+            </li>
+            {% for category in categories %}
+            <li class="nav-item">
+                <a href="{{ url_for('main.index', category=category) }}" 
+                   class="nav-link {% if category == selected_category %}active{% endif %}">
+                    {{ category }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

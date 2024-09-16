@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit an AI Tool{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1>Submit an AI Tool</h1>
+        <form method="POST" action="{{ url_for('main.submit') }}">
+            {{ form.csrf_token }}
+            <div class="mb-3">
+                {{ form.tool_name.label(class="form-label") }}
+                {{ form.tool_name(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.tool_link.label(class="form-label") }}
+                {{ form.tool_link(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.product_hunt_link.label(class="form-label") }}
+                {{ form.product_hunt_link(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.tool_categories.label(class="form-label") }}
+                {{ form.tool_categories(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.tool_description.label(class="form-label") }}
+                {{ form.tool_description(class="form-control", rows="5") }}
+            </div>
+            <div class="mb-3">
+                {{ form.tool_tags.label(class="form-label") }}
+                {{ form.tool_tags(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+    </div>
+</div>
+{% endblock %}

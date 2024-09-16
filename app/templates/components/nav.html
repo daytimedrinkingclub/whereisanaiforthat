@@ -10,7 +10,10 @@
                     <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+                    <a class="nav-link" href="{{ url_for('main.about') }}"><i class="fas fa-info-circle"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.submit') }}"><i class="fas fa-plus"></i> Submit</a>
                 </li>
             </ul>
         </div>

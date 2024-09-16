@@ -1,3 +1,57 @@
 body {
     font-family: Arial, sans-serif;
 }
+
+body { 
+    background-color: #1e1e2e; 
+    color: #e0e0e0;
+}
+.card { 
+    transition: transform .2s; 
+    background-color: #2d2d3f;
+    border: 1px solid #3d3d4f;
+}
+.card:hover { transform: scale(1.03); }
+.navbar { background-color: #2d2d3f !important; }
+.btn-outline-primary {
+    color: #bb86fc;
+    border-color: #bb86fc;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: #bb86fc;
+    color: #1e1e2e;
+}
+.form-control {
+    background-color: #3d3d4f;
+    color: #e0e0e0;
+    border-color: #4d4d5f;
+}
+.form-control:focus {
+    background-color: #3d3d4f;
+    color: #e0e0e0;
+    border-color: #bb86fc;
+    box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+.side-nav {
+    background-color: #2b2d3e;
+    border-right: 1px solid #3a3c52;
+    height: calc(100vh - 56px); /* Adjust this value based on your navbar height */
+    overflow-y: auto;
+}
+
+.side-nav .nav-link {
+    color: #a9adc1;
+}
+
+.side-nav .nav-link:hover,
+.side-nav .nav-link.active {
+    color: #ffffff;
+    background-color: #3a3c52;
+}
+
+@media (max-width: 767.98px) {
+    .side-nav {
+        height: auto;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-5">About Where is an AI For That</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <p>After being tired of searching for AI tools that actually work for a given use case, we decided to create a directory of AI tools that have been vetted and proven to be effective. Our goal is to save you time and frustration by providing a curated list of reliable AI tools for various tasks.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Our Listing Rules</h2>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <ul>
+                <li>All tools listed have been personally tested and verified by our team</li>
+                <li>Tools must be consistently reliable and produce high-quality results</li>
+                <li>We prioritize tools that are user-friendly and accessible to a wide audience</li>
+            </ul>
+            <p class="text-center mt-4">
+                Have an AI tool that meets our criteria? <a href="{{ url_for('main.submit') }}">Submit it here!</a>
+            </p>
+            <p class="text-center">
+                <a href="{{ url_for('main.index') }}" class="btn btn-primary">Browse AI Tools</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
