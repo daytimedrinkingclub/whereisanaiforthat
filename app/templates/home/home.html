@@ -3,20 +3,40 @@
 {% block title %}AI Tools Listing{% endblock %}
 
 {% block content %}
-    <h1 class="text-center mb-5">AI tools which work 100%</h1>
-    
-    <div class="row">
-        <div class="col-md-3">
-            {% include 'components/side_nav.html' %}
+<div class="row g-0"> <!-- Remove gutters -->
+    <div class="col-md-3 sidebar">
+        {% include 'components/side_nav.html' %}
+    </div>
+    <div class="col-md-9 main-content">
+        <h1 class="text-center mb-4">AI tools which work 100%</h1>
+        <div class="mb-4 px-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for AI tools...">
         </div>
-        <div class="col-md-9">
-            <div class="row" id="aiToolsContainer">
-                {% for tool in data %}
-                    {% include 'components/tool_card.html' %}
-                {% else %}
-                    <p class="text-center">No tools available.</p>
-                {% endfor %}
-            </div>
+        <div class="row g-4 px-3" id="aiToolsContainer">
+            {% for tool in data %}
+                {% include 'components/tool_card.html' %}
+            {% else %}
+                <p class="text-center">No tools available.</p>
+            {% endfor %}
         </div>
     </div>
+</div>
+
+{% block extra_js %}
+<script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+        let searchTerm = this.value.toLowerCase();
+        let tools = document.getElementsByClassName('tool-card');
+        
+        for (let tool of tools) {
+            let toolName = tool.getElementsByClassName('card-title')[0].innerText.toLowerCase();
+            if (toolName.includes(searchTerm)) {
+                tool.style.display = '';
+            } else {
+                tool.style.display = 'none';
+            }
+        }
+    });
+</script>
+{% endblock %}
 {% endblock %}

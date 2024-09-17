@@ -1,52 +1,68 @@
 body {
     font-family: Arial, sans-serif;
-}
-
-body { 
-    background-color: #1e1e2e; 
+    background-color: #1a1a2e;
     color: #e0e0e0;
 }
+
 .card { 
     transition: transform .2s; 
-    background-color: #2d2d3f;
-    border: 1px solid #3d3d4f;
+    background-color: #0f3460;
+    border: none;
 }
+
 .card:hover { transform: scale(1.03); }
-.navbar { background-color: #2d2d3f !important; }
+
+.navbar { 
+    background-color: #16213e;
+}
+
 .btn-outline-primary {
     color: #bb86fc;
     border-color: #bb86fc;
 }
+
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
     background-color: #bb86fc;
     color: #1e1e2e;
 }
+
+.btn-primary {
+    background-color: #e94560;
+    border-color: #e94560;
+}
+
+.btn-primary:hover {
+    background-color: #d63551;
+    border-color: #d63551;
+}
+
 .form-control {
     background-color: #3d3d4f;
     color: #e0e0e0;
     border-color: #4d4d5f;
 }
+
 .form-control:focus {
     background-color: #3d3d4f;
     color: #e0e0e0;
     border-color: #bb86fc;
     box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
 }
+
 .side-nav {
-    background-color: #2b2d3e;
+    background-color: #16213e;
     border-right: 1px solid #3a3c52;
     height: calc(100vh - 56px); /* Adjust this value based on your navbar height */
     overflow-y: auto;
 }
 
 .side-nav .nav-link {
-    color: #a9adc1;
+    color: #e0e0e0;
 }
 
 .side-nav .nav-link:hover,
 .side-nav .nav-link.active {
-    color: #ffffff;
-    background-color: #3a3c52;
+    background-color: #0f3460;
 }
 
 @media (max-width: 767.98px) {
@@ -54,4 +70,26 @@ body {
         height: auto;
         margin-bottom: 20px;
     }
+}
+
+.sidebar {
+    background-color: #16213e;
+    min-height: calc(100vh - 56px); /* Adjust based on your navbar height */
+    padding: 1rem;
+}
+
+.main-content {
+    background-color: #1a1a2e;
+    min-height: calc(100vh - 56px); /* Adjust based on your navbar height */
+    padding: 1rem;
+}
+
+#searchInput {
+    background-color: #16213e;
+    color: #e0e0e0;
+    border: 1px solid #0f3460;
+}
+
+#searchInput::placeholder {
+    color: #8d8d8d;
 }

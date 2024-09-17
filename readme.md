@@ -19,7 +19,16 @@ whereisanaiforthat/
         - static/
           - styles.css # any custom styles needed can be added here
         - templates/
-          - index.html # Currently the only template added 
+          - components/
+            - footer.html
+            - nav.html
+            - side_nav.html
+            - tool_card.html
+          - home/
+            - about.html
+            - home.html
+            - submit.html
+          - base.html # Currently the only template added 
         - __init__.py
         - routes/
           - __init__.py
